@@ -2,7 +2,7 @@ import { expect, Locator, Page } from '@playwright/test'
 
 export class Input {
   readonly page: Page
-  readonly inputLocator: Locator;
+  readonly inputLocator: Locator
 
   constructor(page: Page, selector: string) {
     this.page = page
@@ -10,11 +10,11 @@ export class Input {
   }
 
   async checkVisible(): Promise<void> {
-    await expect(this.inputLocator).toBeVisible();
+    await expect(this.inputLocator).toBeVisible()
   }
 
   async fill(value: string): Promise<void> {
-    await this.inputLocator.clear();
-    await this.inputLocator.fill(value);
+    await this.inputLocator.clear()
+    await this.inputLocator.fill(value)
   }
 }

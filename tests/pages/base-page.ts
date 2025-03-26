@@ -2,7 +2,6 @@ import { expect, Locator, Page } from '@playwright/test'
 import { Button } from '../atoms/Button'
 import { Link } from '../atoms/Link'
 
-
 export class BasePage {
   readonly page: Page
   readonly footer: Locator
@@ -24,7 +23,7 @@ export class BasePage {
     this.num = 123
   }
 
-  async checkFooterAttached(): Promise<void>{
+  async checkFooterAttached(): Promise<void> {
     await expect(this.footer).toBeAttached()
   }
 }

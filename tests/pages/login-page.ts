@@ -14,7 +14,7 @@ export class LoginPage extends BasePage {
   // add more locators here
 
   constructor(page: Page) {
-    super(page);
+    super(page)
     //this.page = page
     this.signInButton = new Button(this.page, '[data-name=signIn-button]') //page.getByTestId('signIn-button')
     this.usernameField = new Input(this.page, '[data-name="username-input"]') //page.getByTestId('username-input')
